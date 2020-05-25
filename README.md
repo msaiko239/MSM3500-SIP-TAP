@@ -47,20 +47,20 @@ Example
 # Enabling SIP to TAP in asterisk. 
 This needs to be completed in the CLI. You will need to edit the file /etc/asterisk/extensions.conf and add the following lines to the context you are using.
 
-;Using the SIP-TAP Scripts
-;USB paging output
-exten => 100,1,NoOP(${CALLERID(NAME)})
-exten => 100,2,AGI(SIP-TAP-USBserial.py)
-exten => 100,n,Hangup
+    ;Using the SIP-TAP Scripts
+    ;USB paging output
+    exten => 100,1,NoOP(${CALLERID(NAME)})
+    exten => 100,2,AGI(SIP-TAP-USBserial.py)
+    exten => 100,n,Hangup
 
-;Ethernet paging output
-exten => 101,1,NoOP(${CALLERID(NAME)})
-exten => 101,2,AGI(SIP-TAP-Ethernetpage.py)
-exten => 101,n,Hangup
+    ;Ethernet paging output
+    exten => 101,1,NoOP(${CALLERID(NAME)})
+    exten => 101,2,AGI(SIP-TAP-Ethernetpage.py)
+    exten => 101,n,Hangup
 
-;Both script to trigger to send to USB and Ethernet paging encoder.
-;exten => (extension number or range),1,NoOP(${CALLERID(NAME)})
-;exten => (extension number or range),2,AGI(siptapusb.agi)
-;exten => (extension number or range),2,AGI(siptapeth.agi)
-;exten => (extension number or range),n,Hangup
+    ;Both script to trigger to send to USB and Ethernet paging encoder.
+    ;exten => (extension number or range),1,NoOP(${CALLERID(NAME)})
+    ;exten => (extension number or range),2,AGI(siptapusb.agi)
+    ;exten => (extension number or range),2,AGI(siptapeth.agi)
+    ;exten => (extension number or range),n,Hangup
 
