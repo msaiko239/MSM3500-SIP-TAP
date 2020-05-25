@@ -60,7 +60,7 @@ This needs to be completed in the CLI. You will need to edit the file /etc/aster
 
     ;Both script to trigger to send to USB and Ethernet paging encoder.
     ;exten => (extension number or range),1,NoOP(${CALLERID(NAME)})
-    ;exten => (extension number or range),2,AGI(siptapusb.agi)
-    ;exten => (extension number or range),2,AGI(siptapeth.agi)
+    ;exten => (extension number or range),2,AGI(SIP-TAP-USBserial.py)
+    ;exten => (extension number or range),2,AGI(SIP-TAP-Ethernetpage.py)
     ;exten => (extension number or range),n,Hangup
 
