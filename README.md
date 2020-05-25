@@ -36,11 +36,11 @@ Enter the IP or USB settings of your paging system and hit update ini.
 
 from the cli of your server enter the command
 
-    python3 /var/lib/asterisk/agi-bin/test_raemis.py '<phone-you-want-to-send-to>' '<Message-Text>' '<from-number>' '0'
+    python3 /var/lib/asterisk/agi-bin/test_SIP-TAP-Ethernetpage.py '<phone-you-want-to-send-to>' '<Message-Text>'
+    python3 /var/lib/asterisk/agi-bin/test_SIP-TAP-USBserial.py '<phone-you-want-to-send-to>' '<Message-Text>'
     
 Example
 
-    python3 /var/lib/asterisk/agi-bin/test_raemis.py '1234' 'Hello this is a test' '4321' '0'
-
-The 0 at the end is the type of message 0 meaning text, Druid has more info in their API documentation
+    python3 /var/lib/asterisk/agi-bin/test_SIP-TAP-Ethernetpage.py '1234' 'Hello this is a test'
+    python3 /var/lib/asterisk/agi-bin/test_SIP-TAP-USBserial.py '1234' 'Hello this is a test'
     
