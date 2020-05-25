@@ -1,6 +1,6 @@
-# MSM3500-LTE
-Multi System Messaging build for LTE Integration to Druid EPC
-This system is built to integrate Ubuntu to Druid EPC for integtration to text messaging to an LTE device. The system uses asterisk agi to convert the incomming SIP message to an HTTP request to Druid which then send the message to your User Device. 
+# MSM3500-SIP-TAP
+Multi System Messaging build for SIP Messaging conversion to TAP 1.8 message protocol. 
+This system is built to integrate SIP outputs typically from nurse call to a ethernet or USB input paging system. The system uses asterisk agi to convert the incomming SIP message to a TAP message which then send the message to your User Device. 
 
 # Prerequisites
 
@@ -15,9 +15,9 @@ Install Asterisk - https://wiki.asterisk.org/wiki/display/AST/Installing+Asteris
 
     sudo apt-get update
     
-    git clone https://github.com/msaiko239/MSM3500-LTE.git
+    git clone https://github.com/msaiko239/MSM3500-SIP-TAP.git
 
-    cd MSM3500-LTE
+    cd MSM3500-SIP-TAP
     
     sudo chmod 777 install.sh
 
@@ -32,7 +32,7 @@ This will copy all the contents of the repo to your local server and create all 
 # Testing Integration
 To test the integration to your server navigate to http://"your server ip"/config.php
 
-Enter the IP of your Druid Raemis server and hit update ini.
+Enter the IP or USB settings of your paging system and hit update ini.
 
 from the cli of your server enter the command
 
